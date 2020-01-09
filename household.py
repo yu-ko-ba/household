@@ -22,11 +22,12 @@ with open(FILE_DIRECTORY) as f:
         if sys.argv[2] == "-" or sys.argv[2] == "-=":
             POCKET_MONEY -= int(sys.argv[3])
 
-        if sys.argv[4] == "cash":
-            if sys.argv[5] == "+" or sys.argv[5] == "+=":
-                CASH += int(sys.argv[6])
-            if sys.argv[5] == "-" or sys.argv[5] == "-=":
-                CASH -= int(sys.argv[6])
+        if len(sys.argv) > 4:
+            if sys.argv[4] == "cash":
+                if sys.argv[5] == "+" or sys.argv[5] == "+=":
+                    CASH += int(sys.argv[6])
+                if sys.argv[5] == "-" or sys.argv[5] == "-=":
+                    CASH -= int(sys.argv[6])
     
     if sys.argv[1] == "cash":
         if sys.argv[2] == "+" or sys.argv[2] == "+=":
@@ -34,11 +35,12 @@ with open(FILE_DIRECTORY) as f:
         if sys.argv[2] == "-" or sys.argv[2] == "-=":
             CASH -= int(sys.argv[3])
 
-        if sys.argv[4] == "pocket":
-            if sys.argv[5] == "+" or sys.argv[5] == "+=":
-                POCKET_MONEY += int(sys.argv[6])
-            if sys.argv[5] == "-" or sys.argv[5] == "-=":
-                POCKET_MONEY -= int(sys.argv[6])
+        if len(sys.argv) > 4:
+            if sys.argv[4] == "pocket":
+                if sys.argv[5] == "+" or sys.argv[5] == "+=":
+                    POCKET_MONEY += int(sys.argv[6])
+                if sys.argv[5] == "-" or sys.argv[5] == "-=":
+                    POCKET_MONEY -= int(sys.argv[6])
 
     with open(FILE_DIRECTORY, 'w') as f:
         WRITER = csv.writer(f)
