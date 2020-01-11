@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 import os
 import csv
@@ -28,7 +29,7 @@ with open(FILE_DIRECTORY) as f:
                     CASH += int(sys.argv[6])
                 if sys.argv[5] == "-" or sys.argv[5] == "-=":
                     CASH -= int(sys.argv[6])
-    
+
     if sys.argv[1] == "cash":
         if sys.argv[2] == "+" or sys.argv[2] == "+=":
             CASH += int(sys.argv[3])
